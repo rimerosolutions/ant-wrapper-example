@@ -73,4 +73,10 @@ Again, in your =build.xml=, after doing an =ivy:retrieve=, cache the path to the
  :             resource="com/rimerosolutions/ant/wrapper/tasks/antlib.xml"
  :             classpathref="ant.wrapper.classpath"/>
  :  </target>
+ :
+ :  <!-- other content here -->
+ :
+ : <target name="wrapper" description="Generate Ant Wrapper.">
+ :    <wrapper:wrapper/>
+ :  </target>
 
