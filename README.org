@@ -44,8 +44,6 @@ Inside your =ivy.xml= file, add a configuration called =wrapper=.
  :  <dependencies>
  :    <!-- ... Your other dependencies here ... -->
  :    <dependency org="com.rimerosolutions.ant" name="ant-wrapper" rev="0.0.1-SNAPSHOT" changing="true" conf="wrapper->default"/>
- :    <dependency org="org.apache.ant" name="ant-launcher" rev="1.7.0" conf="wrapper->default"/>
- :    <dependency org="org.apache.ant" name="ant" rev="1.7.0" conf="wrapper->default"/>
  :  </dependencies>
 
 
