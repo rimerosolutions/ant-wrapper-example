@@ -39,6 +39,6 @@ limitations under the License.
     <dependency org="commons-io" name="commons-io" rev="2.4" conf="compile->default"/>
     
     <!-- wrapper dependencies -->
-    <dependency org="com.rimerosolutions.ant" name="ant-wrapper" rev="0.0.1-SNAPSHOT" changing="true" conf="wrapper->default"/>
+    <dependency org="com.rimerosolutions.ant" name="ant-wrapper" rev="0.0.2-SNAPSHOT" changing="true" conf="wrapper->default"/>
   </dependencies>
 </ivy-module>

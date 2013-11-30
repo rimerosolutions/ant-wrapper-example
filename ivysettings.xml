@@ -15,22 +15,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <ivysettings>
-  <property name="ivy.default.conf.mappings" value="default->*" />
-  <settings defaultResolver="chain"/> 
+        <property name="ivy.default.conf.mappings" value="default->*" />
+        <settings defaultResolver="chain"/>
 
-  <resolvers>
-    <chain name="chain">
-      <!-- YOU MUST HAVE SONATYPE SNAPSHOTS REPOSITORIES TO RESOLVE THE ANT WRAPPER -->
-      <url name="sonatype-snapshots" m2compatible="true">
-        <artifact pattern="https://oss.sonatype.org/content/repositories/snapshots/[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
-      </url>
-      <!-- other repositories -->
-      <ibiblio name="central" m2compatible="true"/>
-      <filesystem name="local-m2" m2compatible="true">
-        <artifact pattern="${user.home}/.m2/repository/[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
-      </filesystem>
-    </chain>
-  </resolvers>
+        <resolvers>
+                <chain name="chain">
+                        <url name="mavencentral">
+                                <artifact pattern="http://repo1.maven.org/maven2/[organisation]/[artifact]-[revision].[ext]" />
+                        </url>
+                        <!-- YOU MUST HAVE SONATYPE SNAPSHOTS REPOSITORIES TO RESOLVE THE ANT WRAPPER snapshots -->
+                        <url name="sonatype-snapshots" m2compatible="true">
+                                <artifact pattern="https://oss.sonatype.org/content/repositories/snapshots/[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+                        </url>
+                        <!-- other repositories -->
+                        <ibiblio name="central" m2compatible="true"/>
+                        <filesystem name="local-m2" m2compatible="true">
+                                <artifact pattern="${user.home}/.m2/repository/[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+                        </filesystem>
+                </chain>
+        </resolvers>
 
 </ivysettings>
-
